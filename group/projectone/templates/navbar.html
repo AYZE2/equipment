@@ -1,0 +1,15 @@
+<div>
+    <h1>LOGO  NAVBAR</h1>
+    {% load static%}
+    <img src={% static "appone/download.jpg" %} alt ="test">
+</div>
+
+{% if user.is_authenticated %}
+
+        <a href = "{% url 'appone_createitem' %}">Create Item</a>
+        <a href = "{% url 'logout' %}">logout</a> Hello: {{user.username}}
+{% else %}
+        <a href = "{% url 'register' %}">register new user</a>
+        <a href = "{% url 'login' %}">login</a>
+{% endif %}
+<hr>

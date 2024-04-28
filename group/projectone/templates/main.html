@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Main</title>
+</head>
+
+<body>
+
+{% include 'navbar.html' %}     
+{% if messages %}
+{%for messages in messages%}
+  <div class="alert alert-{{messages.tags}}">
+    {{messages}}
+  </div>
+{%endfor%}
+{% endif %}
+{%block content%}
+
+
+
+{%endblock content%}
+
+</body>
+
+</html>

@@ -1,0 +1,10 @@
+{% extends "main.html" %}
+
+{% block content1 %}
+<h2>You are now logged out</h2>
+<div>
+    <small>
+        <a href="{% url 'login' %}">Log in</a>
+    </small>
+</div>
+{% endblock content1 %}
